@@ -1,6 +1,7 @@
+import Hero from "./sections/Hero";
 const App = () => (
   <>
-    <div className="">helo</div>
+    <Hero />
   </>
 );
 
