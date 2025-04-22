@@ -5,6 +5,14 @@
   --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
 }
 
+.hero-section {
+  background-image: url('/assets/herobg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  /* or any height you want */
+}
 html,
 body {
   width: 100dvw;
@@ -84,16 +92,30 @@ section {
     @apply relative z-10 xl:mt-20 mt-32 md:h-dvh h-[80vh] flex xl:items-center items-start justify-center;
   }
 
-  .hero-text {
+/*   .hero-text {
     @apply flex flex-col justify-center md:text-[60px] text-[30px] font-semibold relative z-10 pointer-events-none;
     img {
-      @apply size-8 md:size-10 object-contain;
+      @apply size-4 md:size-6 object-contain;
     }
     .slide {
-      @apply absolute pt-0 px-2 md:px-5 py-[30px] h-[48px] md:h-[78px] md:translate-y-1 translate-y-0 overflow-hidden;
+      @apply absolute pt-0 px-1 md:px-3 py-[20px] h-[30px] md:h-[50px] md:translate-y-1 translate-y-0 overflow-hidden;
     }
   }
+ */
 
+ .hero-text {
+   @apply flex flex-col justify-center md:text-[40px] text-[20px] font-semibold relative z-10 pointer-events-none;
+
+   img {
+     @apply size-3 md:size-5 object-contain;
+     /* smaller on base, slightly bigger on md+ */
+   }
+
+   .slide {
+          @apply absolute pt-0 px-1 md:px-3 py-[15px] h-[25px] md:h-[45px] md:translate-y-1 translate-y-0 overflow-hidden;
+     /* @apply absolute pt-0 px-1 md:px-2 py-[10px] h-[24px] md:h-[40px] md:translate-y-1 translate-y-0 overflow-hidden; */
+   }
+ }
   .hero-badge {
     @apply bg-black-200 py-2 px-4 rounded-full w-fit text-sm md:text-base text-nowrap;
   }
@@ -153,7 +175,13 @@ section {
       }
     }
   }
-
+.violet-gradient {
+  background: #804dee;
+  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+  background: -webkit-linear-gradient(-90deg,
+      #804dee 0%,
+      rgba(60, 51, 80, 0) 100%);
+}
   .app-showcase {
     @apply w-full mt-20 px-5 md:px-20 py-10 md:py-20 flex items-center justify-center;
 

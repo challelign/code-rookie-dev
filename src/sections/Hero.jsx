@@ -1,83 +1,73 @@
-import React from "react";
+import { styles } from "../styles";
+import ComputersCanvas from "../components/canvas/Computers";
+
+import Button from "../components/Button";
+import StarsCanvas from "../components/canvas/Stars";
 import { words } from "../constants";
-import Button from "../components/Button.jsx";
-import HeroExperience from "../components/HeroModels/HeroExperience.jsx";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import AnimatedCounter from "../components/AnimatedCounter.jsx";
 
 const Hero = () => {
-  useGSAP(() => {
-    gsap.fromTo(
-      ".hero-text h1",
-      {
-        y: 50,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        stagger: 0.2,
-        duration: 1,
-        ease: "power2.inOut",
-      }
-    );
-  });
-
   return (
-    <section id="hero" className="relative overflow-hidden">
+    <section id="hero" className={`relative w-full h-screen mx-auto`}>
       <div className="absolute top-0 left-0 z-10">
         <img src="/images/bg.png" alt="background" />
       </div>
-      <div className="hero-layout">
-        {/* LEFT Hero Content */}
-        <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
-          <div className="flex flex-col gap-7">
-            <div className="hero-text">
-              <h1>
-                Transforming
-                <span className="slide">
-                  <span className="wrapper">
-                    {words.map((word, index) => (
-                      <span
-                        key={index}
-                        className="flex items-center md:gap-3 gap-1 pb-2"
-                      >
-                        <img
-                          src={word.imgPath}
-                          alt="person"
-                          className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
-                        />
-                        <span>{word.text}</span>
-                      </span>
-                    ))}
-                  </span>
-                </span>
-              </h1>
-              <h1>into Scalable Solutions</h1>
-              <h1>that Drive Real Results</h1>
-            </div>
-            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              👋 Hi, I’m Challelign — a software developer from Ethiopia with a
-              strong passion for crafting clean, efficient code
-            </p>
-            <Button
-              className="md:w-80 md:h-16 w-60 h-12"
-              id="button"
-              text="See my work"
-            />
-          </div>
-        </header>
-        {/* RIGHT 3D MODEL */}
+      <StarsCanvas />
 
-        <figure>
-          {/*<div className="hero-3d-layout border-red-200 border-2">*/}
-          <div className="hero-3d-layout  ">
-            <HeroExperience />
+      <div
+        className={` absolute inset-0 top-[90px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+      >
+        <div className="flex flex-col justify-center items-center mt-5">
+          <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
+          <div className="w-1 sm:h-80 h-40 violet-gradient" />
+        </div>
+
+        <div className="flex flex-col gap-7">
+          <h1
+            className={`${styles.heroHeadText} text-white text-3xl md:text-4xl`}
+          >
+            Hi, I'm <span className="text-[#915EFF]">Challelign</span>
+          </h1>
+
+          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+            Software developer from Ethiopia <br className="sm:block hidden" />,
+            passionate about creating clean and efficient code.
+          </p>
+          <div className="hero-text">
+            <h1>
+              Transforming
+              <span className="slide">
+                <span className="wrapper">
+                  {words.map((word, index) => (
+                    <span
+                      key={index}
+                      className="flex items-center md:gap-2 gap-1 pb-1"
+                    >
+                      <img
+                        src={word.imgPath}
+                        alt="person"
+                        className="md:size-5 size-3 rounded-full bg-white-50"
+                      />
+                      <span>{word.text}</span>
+                    </span>
+                  ))}
+                </span>
+              </span>
+            </h1>
+            <h1 className={`${styles.heroSubText}`}>into Scalable Solutions</h1>
+            <h1 className={`${styles.heroSubText}`}>that Drive Real Results</h1>
           </div>
-        </figure>
+          <header className="flex flex-col justify-center md:w-full w-screen md:px-5 px-5">
+            <div className="flex flex-col gap-7">
+              <Button
+                className="md:w-60 md:h-14 w-60 h-10"
+                id="button"
+                text="See my work"
+              />
+            </div>
+          </header>
+        </div>
       </div>
-      <AnimatedCounter />
+      <ComputersCanvas />
     </section>
   );
 };

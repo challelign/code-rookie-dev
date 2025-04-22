@@ -18,7 +18,7 @@ const Showcase = () => {
       project2Ref.current,
       project3Ref.current,
     ];
-
+    //FOR EACH PROJECT REF
     projects.forEach((card, index) => {
       gsap.fromTo(
         card,
@@ -35,6 +35,8 @@ const Showcase = () => {
         }
       );
     });
+
+    //   FOR SECTION
     gsap.fromTo(
       sectionRef.current,
       { opacity: 0 },
@@ -43,7 +45,12 @@ const Showcase = () => {
   }, []);
 
   return (
-    <section id="work" ref={sectionRef} className="app-showcase">
+    <section
+      id="work"
+      ref={sectionRef}
+      // className="app-showcase border-2 border-red-400"
+      className="app-showcase"
+    >
       <div className="w-full">
         <div className="showcaselayout">
           {/* LEFT */}
