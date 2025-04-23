@@ -1,4 +1,5 @@
 import AnimatedCounter from "./components/AnimatedCounter";
+import LogoSection from "./components/LogoSection";
 import NavBar from "./components/NavBar";
 
 import Hero from "./sections/Hero";
@@ -16,6 +17,8 @@ const App = () => (
         <Hero />
       </div>
       <AnimatedCounter />
+      <LogoSection />
+
       <Showcase />
     </div>
   </>
