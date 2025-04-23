@@ -9,21 +9,38 @@ const Computers = ({ device }) => {
   const computer = useGLTF("/desktop_pc/scene.gltf");
 
   // Adjust values based on device
-  const config = {
+  /*   const config = {
     scale: {
-      mobile: 0.6,
-      tablet: 0.7,
+      mobile: 0.55,
+      tablet: 0.65,
       desktop: 0.75,
     },
     position: {
-      mobile: [0.0, -3, 17.84],
-      tablet: [-0.3, -3.1, -2.5],
-      desktop: [-0.5, -3.25, -4.5],
+      mobile: [0, -2.5, 0],
+      tablet: [-0.3, -3, -3.2],
+      desktop: [-0.5, -3.8, -4.2],
+    },
+  }; */
+  // Dynamic settings per device
+  const config = {
+    scale: {
+      mobile: 0.5,
+      tablet: 0.65,
+      desktop: 0.75,
+    },
+    position: {
+      mobile: [0, -2.3, -1],
+      tablet: [-0.3, -3.2, -3],
+      desktop: [-0.6, -3.6, -4],
+    },
+    rotation: {
+      mobile: [-0.01, -0.4, -0.05],
+      tablet: [-0.01, -0.4, -0.1],
+      desktop: [-0.01, -0.4, -0.1],
     },
   };
-
   return (
-    <mesh>
+    /*     <mesh>
       <ambientLight intensity={0.5} />
       <hemisphereLight
         skyColor="#ffffff"
@@ -46,6 +63,32 @@ const Computers = ({ device }) => {
         scale={config.scale[device]}
         position={config.position[device]}
         rotation={[-0.01, -0.4, -0.1]}
+      />
+    </mesh> */
+
+    <mesh>
+      <ambientLight intensity={0.5} />
+      <hemisphereLight
+        skyColor="#ffffff"
+        groundColor="#222222"
+        intensity={0.6}
+      />
+      <spotLight
+        position={[-20, 50, 10]}
+        angle={0.15}
+        penumbra={1}
+        intensity={1.8}
+        castShadow
+        shadow-mapSize-width={2048}
+        shadow-mapSize-height={2048}
+      />
+      <pointLight intensity={1} />
+
+      <primitive
+        object={computer.scene}
+        scale={config.scale[device]}
+        position={config.position[device]}
+        rotation={config.rotation[device]}
       />
     </mesh>
   );
@@ -78,16 +121,27 @@ const ComputersCanvas = () => {
   const device = useResponsive();
 
   const cameraConfig = {
-    mobile: [15, 2, 5],
+    mobile: [0, 1.7, 10], // centered and pulled back
     tablet: [18, 3, 5],
-    desktop: [20, 3, 5],
+    desktop: [20, 3, 5], //x,y,z
   };
+
   // Define styles with conditional top padding for mobile and tablet
   // Define styles with conditional top padding for mobile and tablet
+  /*   const canvasStyle = {
+    paddingTop: device === "mobile" || device === "tablet" ? "120px" : "0",
+    height: "100vh",
+    minHeight: "500px", // ← Add this
+    width: "100%",
+    display: "block", // Ensure it's not `inline`
+  }; */
   const canvasStyle = {
-    paddingTop: device === "mobile" || device === "tablet" ? "130px" : "0", // Adds 70px padding on mobile and tablet
-    height: "100vh", // Ensure the canvas takes the full height
-    width: "100%", // Ensure the canvas takes the full width
+    paddingTop:
+      device === "mobile" ? "80px" : device === "tablet" ? "100px" : "0px",
+    height: "100vh",
+    minHeight: "550px",
+    width: "100%",
+    display: "block",
   };
   return (
     <Canvas

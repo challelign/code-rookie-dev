@@ -7,7 +7,7 @@ import { words } from "../constants";
 
 const Hero = () => {
   return (
-    <section id="hero" className={`relative w-full h-screen mx-auto`}>
+    <section id="hero" className={`relative w-full h-screen mx-auto   `}>
       <div className="absolute top-0 left-0 z-10">
         <img src="/images/bg.png" alt="background" />
       </div>
@@ -27,14 +27,16 @@ const Hero = () => {
           >
             Hi, I'm <span className="text-[#915EFF]">Challelign</span>
           </h1>
-
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            Software developer from Ethiopia <br className="sm:block hidden" />,
-            passionate about creating clean and efficient code.
+          <p
+            className={`${styles.heroSubText} mt-4 text-white-100 break-words hidden md:block`}
+          >
+            Full-stack developer based in Ethiopia
+            <br className="sm:block hidden" />
+            focused on building clean & efficient digital products.
           </p>
           <div className="hero-text">
             <h1>
-              Transforming
+              I turn
               <span className="slide">
                 <span className="wrapper">
                   {words.map((word, index) => (
@@ -53,13 +55,15 @@ const Hero = () => {
                 </span>
               </span>
             </h1>
-            <h1 className={`${styles.heroSubText}`}>into Scalable Solutions</h1>
-            <h1 className={`${styles.heroSubText}`}>that Drive Real Results</h1>
+            <h1 className={`${styles.heroSubText}`}>into scalable solutions</h1>
+            <h1 className={`${styles.heroSubText}`}>
+              that people love to use.
+            </h1>
           </div>
-          <header className="flex flex-col justify-center md:w-full w-screen md:px-5 px-5">
-            <div className="flex flex-col gap-7">
+          <header className="flex flex-col justify-center items-start w-full px-6 md:px-10 mt-6 md:mt-10">
+            <div className="flex flex-col gap-6">
               <Button
-                className="md:w-60 md:h-14 w-60 h-10"
+                className="w-56 h-12 sm:w-60 sm:h-14"
                 id="button"
                 text="See my work"
               />
