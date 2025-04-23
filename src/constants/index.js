@@ -27,7 +27,6 @@ const words = [
   { text: "Mockups", imgPath: "/images/mockups.png" },
   { text: "Plans", imgPath: "/images/plans.png" },
   // { text: "Requirements", imgPath: "/images/requirements.png" },
-
 ];
 
 const counterItems = [
@@ -73,7 +72,7 @@ const logoIconsList = [
   },
 ];
 
-const abilities = [
+/* const abilities = [
   {
     imgPath: "/images/seo.png",
     title: "Quality Focus",
@@ -88,6 +87,53 @@ const abilities = [
     imgPath: "/images/time.png",
     title: "On-Time Delivery",
     desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
+  },
+]; */
+const abilities = [
+  {
+    imgPath: "/images/tech.png",
+    title: "Full-Stack Expertise",
+    desc: "Proficient in both frontend and backend technologies, building seamless, end-to-end solutions with modern frameworks like React, Node.js, and more.",
+  },
+  {
+    imgPath: "/images/time.png",
+    title: "Timely Execution",
+    desc: "Dedicated to ensuring projects are completed on time without compromising quality, adhering to deadlines while maintaining meticulous attention to detail.",
+  },
+  {
+    imgPath: "/images/secure.png",
+    title: "Security-First Approach",
+    desc: "Ensuring the security of applications and data with best practices in encryption, authentication, and secure coding techniques.",
+  },
+  {
+    imgPath: "/images/optimization.png",
+    title: "Performance Optimization",
+    desc: "Expert in optimizing applications for performance, scalability, and efficiency, ensuring a smooth user experience even under heavy loads.",
+  },
+  {
+    imgPath: "/images/agile.png",
+    title: "Agile Methodology",
+    desc: "Skilled in agile practices, delivering iterative and incremental value through sprints, ensuring flexibility and adaptability to changing requirements.",
+  },
+  {
+    imgPath: "/images/chat.png",
+    title: "Effective Communication",
+    desc: "Proactively keeping clients informed throughout the development process, ensuring clarity, transparency, and alignment with project goals.",
+  },
+  {
+    imgPath: "/images/seo.png",
+    title: "Precision Engineering",
+    desc: "Committed to delivering exceptional, high-quality solutions while focusing on every intricate detail for flawless execution.",
+  },
+  {
+    imgPath: "/images/innovation.png",
+    title: "Innovative Problem Solving",
+    desc: "Bringing creative, forward-thinking solutions to complex challenges, driving continuous improvement and innovation in all aspects of development.",
+  },
+  {
+    imgPath: "/images/collaboration.png",
+    title: "Collaborative Team Player",
+    desc: "Collaborating effectively with cross-functional teams, leveraging collective expertise to achieve superior results and drive project success.",
   },
 ];
 

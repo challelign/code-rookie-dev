@@ -5,7 +5,7 @@ import Button from "../components/Button";
 import StarsCanvas from "../components/canvas/Stars";
 import { words } from "../constants";
 
-const Hero = () => {
+const HeroSection = () => {
   return (
     <section id="hero" className={`relative w-full h-screen mx-auto   `}>
       <div className="absolute top-0 left-0 z-10">
@@ -76,4 +76,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroSection;

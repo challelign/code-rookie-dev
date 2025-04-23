@@ -39,6 +39,12 @@ const Computers = ({ device }) => {
       desktop: [-0.01, -0.4, -0.1],
     },
   };
+  const objectPosition = config.position[device];
+  const pointLightAbove = [
+    objectPosition[0],
+    objectPosition[1] + 7, // 5 units above the model
+    objectPosition[2],
+  ];
   return (
     /*     <mesh>
       <ambientLight intensity={0.5} />
@@ -82,8 +88,16 @@ const Computers = ({ device }) => {
         shadow-mapSize-width={2048}
         shadow-mapSize-height={2048}
       />
-      <pointLight intensity={1} />
 
+      {/* Point light above the model */}
+      <pointLight
+        position={pointLightAbove}
+        intensity={15}
+        distance={10}
+        decay={2}
+        color="#ffffff"
+      />
+      <pointLight intensity={15} />
       <primitive
         object={computer.scene}
         scale={config.scale[device]}

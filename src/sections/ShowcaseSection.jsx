@@ -6,7 +6,7 @@ import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Showcase = () => {
+const ShowcaseSection = () => {
   const sectionRef = useRef(null);
   const project1Ref = useRef(null);
   const project2Ref = useRef(null);
@@ -94,4 +94,4 @@ const Showcase = () => {
   );
 };
 
-export default Showcase;
+export default ShowcaseSection;

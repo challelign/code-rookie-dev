@@ -2,9 +2,10 @@ import AnimatedCounter from "./components/AnimatedCounter";
 import LogoSection from "./sections/LogoSection";
 import NavBar from "./components/NavBar";
 
-import Hero from "./sections/HeroSection";
-import Showcase from "./sections/ShowcaseSection";
 import heroBg from "/assets/herobg.png";
+import FeatureCardsSection from "./sections/FeatureCardsSection";
+import ShowcaseSection from "./sections/ShowcaseSection";
+import HeroSection from "./sections/HeroSection";
 
 const App = () => (
   <>
@@ -14,12 +15,13 @@ const App = () => (
         className="hero-section pt-5"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
-        <Hero />
+        <HeroSection />
       </div>
       <AnimatedCounter />
       <LogoSection />
 
-      <Showcase />
+      <ShowcaseSection />
+      <FeatureCardsSection />
     </div>
   </>
 );
