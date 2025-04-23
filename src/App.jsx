@@ -9,9 +9,8 @@ const App = () => (
   <>
     <div className="relative z-0 bg-primary">
       <NavBar />
-
       <div
-        className="hero-section"
+        className="hero-section pt-5"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
         <Hero />
