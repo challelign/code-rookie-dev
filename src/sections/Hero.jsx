@@ -47,7 +47,7 @@ const Hero = () => {
                         alt="person"
                         className="md:size-5 size-3 rounded-full bg-white-50"
                       />
-                      <span>{word.text}</span>
+                      <span className="text-[#915EFF]">{word.text}</span>
                     </span>
                   ))}
                 </span>

@@ -2,7 +2,7 @@ import AnimatedCounter from "./components/AnimatedCounter";
 
 import Hero from "./sections/Hero";
 import Showcase from "./sections/Showcase";
-import heroBg from "../public/assets/herobg.png";
+import heroBg from "/assets/herobg.png";
 
 const App = () => (
   <>
