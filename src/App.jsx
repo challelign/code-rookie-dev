@@ -6,6 +6,7 @@ import heroBg from "/assets/herobg.png";
 import FeatureCardsSection from "./sections/FeatureCardsSection";
 import ShowcaseSection from "./sections/ShowcaseSection";
 import HeroSection from "./sections/HeroSection";
+import ExperienceSection from "./sections/ExperienceSection";
 
 const App = () => (
   <>
@@ -22,6 +23,7 @@ const App = () => (
 
       <ShowcaseSection />
       <FeatureCardsSection />
+      <ExperienceSection />
     </div>
   </>
 );
