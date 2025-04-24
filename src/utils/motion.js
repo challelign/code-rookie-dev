@@ -13,7 +13,7 @@ export const fadeIn = (direction, type, delay, duration) => {
         type: type,
         delay: delay,
         duration: duration,
-        ease: "easeOut",
+        ease: "easeInOut", // Smooth easing for more fluid motion
       },
     },
   };

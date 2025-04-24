@@ -1,11 +1,64 @@
 import { styles } from "../styles";
-import ComputersCanvas from "../components/canvas/Computers";
 
+import ComputersCanvas from "../components/canvas/Computers";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import Button from "../components/Button";
 import StarsCanvas from "../components/canvas/Stars";
 import { words } from "../constants";
+import { useRef } from "react";
 
 const HeroSection = () => {
+  // Typing animation
+  const textRef = useRef(null);
+  const cursorRef = useRef(null);
+
+  const fullName = "Challelign";
+  const pauseDuration = 2; // seconds
+
+  useGSAP(() => {
+    const chars = fullName.split("");
+    const tl = gsap.timeline({ repeat: -1, repeatDelay: pauseDuration });
+
+    chars.forEach((char, i) => {
+      tl.to(textRef.current, {
+        textContent: fullName.slice(0, i + 1),
+        duration: 0.15,
+        ease: "none",
+      });
+    });
+
+    // FOR THE TEXT
+    tl.to(textRef.current, {
+      textContent: "",
+      duration: 0.5,
+      delay: pauseDuration,
+    });
+
+    // FOR THE CURSOR
+    gsap.to(cursorRef.current, {
+      opacity: 0,
+      ease: "power2.inOut",
+      repeat: -1,
+      yoyo: true,
+      duration: 0.6,
+    });
+  }, []);
+
+  useGSAP(() => {
+    gsap.fromTo(
+      ".hero-text h1",
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power2.inOut" }
+    );
+
+    gsap.fromTo(
+      ".heroHeadTxt",
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power2.inOut" }
+    );
+  });
+
   return (
     <section id="hero" className={`relative w-full h-screen mx-auto   `}>
       <div className="absolute top-0 left-0 z-10">
@@ -21,11 +74,15 @@ const HeroSection = () => {
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
 
-        <div className="flex flex-col gap-7">
+        <div className="flex flex-col gap-7 heroHeadTxt">
           <h1
-            className={`${styles.heroHeadText} text-white text-3xl md:text-4xl`}
+            className={`${styles.heroHeadText} text-white text-3xl md:text-4xl  `}
           >
-            Hi, I'm <span className="text-[#915EFF]">Challelign</span>
+            Hi, I'm <span className="text-[#915EFF]" ref={textRef}></span>
+            <span
+              ref={cursorRef}
+              className="ml-2 w-[2px] h-14 bg-white inline-block blinking-cursor"
+            ></span>
           </h1>
           <p
             className={`${styles.heroSubText} mt-4 text-white-100 break-words hidden md:block`}

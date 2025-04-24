@@ -224,7 +224,21 @@ section {
     }
   }
  */
+@keyframes blink {
 
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.blinking-cursor {
+  animation: blink 1s step-start infinite;
+}
   .hero-text {
     @apply flex flex-col justify-center md:text-[34px] text-[18px] font-semibold relative z-10 pointer-events-none;
 

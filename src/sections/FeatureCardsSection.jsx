@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 
 import { abilities } from "../constants";
 import { fadeIn } from "../utils/motion";
+import { createHandleMouseMove } from "../utils/mouseHandlers";
 const AbilitiesCard = ({ index, imgPath, title, desc }) => {
+  const cardRefs = useRef([]);
+
   return (
     <Tilt
-      className="xs:w-[250px] w-full"
+      className="xs:w-[250px] w-full "
       // tiltMaxAngleX={45}
       // tiltMaxAngleY={45}
       scale={1}
@@ -15,12 +18,15 @@ const AbilitiesCard = ({ index, imgPath, title, desc }) => {
       speed={450}
     >
       <motion.div
+        ref={(el) => (cardRefs.current[index] = el)}
+        onMouseMove={createHandleMouseMove(cardRefs, index)}
         variants={fadeIn("right", "spring", index * 0.2, 0.75)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.3 }}
-        className="card-border rounded-xl p-8 flex flex-col gap-4 min-h-[300px] bg-tertiary"
+        className="card card-border rounded-xl p-8 flex flex-col gap-4 min-h-[300px] bg-tertiary"
       >
+        <div className="glow" />
         <div className="size-14 flex items-center justify-center rounded-full bg-white/10">
           <img src={imgPath} alt={title} className="w-10 h-10 object-contain" />
         </div>
