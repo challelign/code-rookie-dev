@@ -11,6 +11,7 @@ import TestimonialsSection from "./sections/TestimonialsSection";
 import ContactSection from "./sections/ContactSection";
 import TechStackSection from "./sections/TechStackSection";
 import { ToastContainer } from "react-toastify";
+import FooterSection from "./sections/FooterSectopm";
 const App = () => (
   <>
     <div className="relative z-0 bg-primary">
@@ -30,6 +31,7 @@ const App = () => (
       <TechStackSection />
       <TestimonialsSection />
       <ContactSection />
+      <FooterSection />
     </div>
     <ToastContainer />;
   </>

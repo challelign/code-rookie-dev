@@ -285,21 +285,35 @@ const testimonials = [
 ];
 
 const socialImgs = [
+  // {
+  //   name: "insta",
+  //  urlLing: "",
+  //   imgPath: "/images/insta.png",
+  // },
+  // {
+  //   name: "fb",
+  // urlLing: "",
+  //   imgPath: "/images/fb.png",
+  // },
   {
-    name: "insta",
-    imgPath: "/images/insta.png",
+    name: "tg",
+    urlLing: "",
+    imgPath: "/images/telegram-1.png",
   },
   {
-    name: "fb",
-    imgPath: "/images/fb.png",
-  },
-  {
+    urlLing: "https://www.linkedin.com/in/challelign-tilahun-95190611a/",
     name: "x",
     imgPath: "/images/x.png",
   },
   {
+    urlLing: "https://www.linkedin.com/in/challelign-tilahun-95190611a/",
     name: "linkedin",
     imgPath: "/images/linkedin.png",
+  },
+  {
+    urlLing: "https://github.com/challelign",
+    name: "github",
+    imgPath: "/images/git.png",
   },
 ];
 
