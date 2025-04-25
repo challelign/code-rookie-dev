@@ -7,9 +7,10 @@ import FeatureCardsSection from "./sections/FeatureCardsSection";
 import ShowcaseSection from "./sections/ShowcaseSection";
 import HeroSection from "./sections/HeroSection";
 import ExperienceSection from "./sections/ExperienceSection";
-import TechStack from "./sections/TechStack";
-import Testimonials from "./sections/Testimonials";
-
+import TestimonialsSection from "./sections/TestimonialsSection";
+import ContactSection from "./sections/ContactSection";
+import TechStackSection from "./sections/TechStackSection";
+import { ToastContainer } from "react-toastify";
 const App = () => (
   <>
     <div className="relative z-0 bg-primary">
@@ -26,9 +27,11 @@ const App = () => (
       <ShowcaseSection />
       <FeatureCardsSection />
       <ExperienceSection />
-      <TechStack />
-      <Testimonials />
+      <TechStackSection />
+      <TestimonialsSection />
+      <ContactSection />
     </div>
+    <ToastContainer />;
   </>
 );
 

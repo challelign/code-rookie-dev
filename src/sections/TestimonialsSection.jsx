@@ -2,7 +2,7 @@ import { testimonials } from "../constants";
 import TitleHeader from "../components/TitleHeader";
 import GlowCard from "../components/GlowCard";
 
-const Testimonials = () => {
+const TestimonialsSection = () => {
   return (
     <section id="testimonials" className="flex-center section-padding">
       <div className="w-full h-full md:px-20 px-5  mt-20 md:pt-0">
@@ -34,4 +34,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default TestimonialsSection;

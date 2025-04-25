@@ -5,7 +5,7 @@ import TechIcons from "../components/Models/TechLogos/TechIcons";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-const TechStack = () => {
+const TechStackSection = () => {
   // Animate the tech cards in the skills section
   useGSAP(() => {
     // This animation is triggered when the user scrolls to the #skills wrapper
@@ -83,4 +83,4 @@ const TechStack = () => {
   );
 };
 
-export default TechStack;
+export default TechStackSection;
