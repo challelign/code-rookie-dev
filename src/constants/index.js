@@ -121,26 +121,32 @@ const abilities = [
 ];
 
 const techStackImgs = [
+  // {
+  //   name: "React Developer",
+  //   imgPath: "/images/logos/react.png",
+  // },
+
   {
-    name: "React Developer",
-    imgPath: "/images/logos/react.png",
+    name: "Next Js Developer",
+    imgPath: "/images/logos/nextjs2.png",
   },
-  {
-    name: "Python Developer",
-    imgPath: "/images/logos/python.svg",
-  },
-  {
-    name: "Backend Developer",
-    imgPath: "/images/logos/node.png",
-  },
-  {
-    name: "Interactive Developer",
-    imgPath: "/images/logos/three.png",
-  },
-  {
-    name: "Project Manager",
-    imgPath: "/images/logos/git.svg",
-  },
+  // {
+  //   name: "Python Developer",
+  //   imgPath: "/images/logos/python.svg",
+  // },
+
+  // {
+  //   name: "Backend Developer",
+  //   imgPath: "/images/logos/node.png",
+  // },
+  // {
+  //   name: "Interactive Developer",
+  //   imgPath: "/images/logos/three.png",
+  // },
+  // {
+  //   name: "Project Manager",
+  //   imgPath: "/images/logos/git.svg",
+  // },
 ];
 
 const techStackIcons = [
@@ -150,12 +156,12 @@ const techStackIcons = [
     scale: 1,
     rotation: [0, 0, 0],
   },
-  {
-    name: "Python Developer",
-    modelPath: "/models/python-transformed.glb",
-    scale: 0.8,
-    rotation: [0, 0, 0],
-  },
+  // {
+  //   name: "Python Developer",
+  //   modelPath: "/models/python-transformed.glb",
+  //   scale: 0.8,
+  //   rotation: [0, 0, 0],
+  // },
   {
     name: "Backend Developer",
     modelPath: "/models/node-transformed.glb",

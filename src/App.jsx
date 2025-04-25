@@ -7,6 +7,7 @@ import FeatureCardsSection from "./sections/FeatureCardsSection";
 import ShowcaseSection from "./sections/ShowcaseSection";
 import HeroSection from "./sections/HeroSection";
 import ExperienceSection from "./sections/ExperienceSection";
+import TechStack from "./sections/TechStack";
 
 const App = () => (
   <>
@@ -24,6 +25,7 @@ const App = () => (
       <ShowcaseSection />
       <FeatureCardsSection />
       <ExperienceSection />
+      <TechStack />
     </div>
   </>
 );
