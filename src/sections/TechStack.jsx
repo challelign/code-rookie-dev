@@ -35,14 +35,14 @@ const TechStack = () => {
   });
   return (
     <div id="skills" className="flex-center section-padding">
-      <div className="w-full h-full md:px-10 px-5">
+      <div className="w-full h-full md:px-20 px-5  mt-20 md:pt-0">
         <TitleHeader
           title="My Prefeered Tech Stack"
           sub="🤝 Empowering Solutions with My Expertise"
         />
         <div className="tech-grid">
           {/* This is for the img part */}
-          {techStackImgs.map((techStackIcon, index) => (
+          {techStackImgs.map((tImages, index) => (
             <div
               key={index}
               className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg"
@@ -50,10 +50,10 @@ const TechStack = () => {
               <div className="tech-card-animated-bg" />
               <div className="tech-card-content">
                 <div className="tech-icon-wrapper">
-                  <img src={techStackIcon.imgPath} alt="" />
+                  <img src={tImages.imgPath} alt={tImages.name} />
                 </div>
                 <div className="padding-x w-full">
-                  <p>{techStackIcon.name}</p>
+                  <p>{tImages.name}</p>
                 </div>
               </div>
             </div>
