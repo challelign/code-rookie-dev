@@ -6,3 +6,7 @@ npx gltfjsx computer-optimized.glb -T
 
 computer-optimized-transformed.glb
 AND Computer-optimized.jsx file
+
+# TO USE EMAILJS
+
+npm i @emailjs/browser --legacy-peer-deps

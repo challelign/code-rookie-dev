@@ -27,7 +27,7 @@ const ContactSection = () => {
       await emailjs.sendForm(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        formRef.current,
+        formRef.current, // must be in this order
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       );
       // Reset form and stop loading
@@ -64,7 +64,7 @@ const ContactSection = () => {
                     name="name"
                     value={form.name}
                     onChange={handleChange}
-                    placeholder="What’s your good name?"
+                    placeholder="What’s your full name?"
                     required
                   />
                 </div>
