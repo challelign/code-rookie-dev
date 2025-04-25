@@ -12,11 +12,12 @@ const HeroSection = () => {
   // Typing animation
   const textRef = useRef(null);
   const cursorRef = useRef(null);
-
+  // First, show the full name instantly
   const fullName = "Challelign";
   const pauseDuration = 2; // seconds
 
-  useGSAP(() => {
+  // this is text animation
+  /*   useGSAP(() => {
     const chars = fullName.split("");
     const tl = gsap.timeline({ repeat: -1, repeatDelay: pauseDuration });
 
@@ -36,6 +37,46 @@ const HeroSection = () => {
     });
 
     // FOR THE CURSOR
+    gsap.to(cursorRef.current, {
+      opacity: 0,
+      ease: "power2.inOut",
+      repeat: -1,
+      yoyo: true,
+      duration: 0.6,
+    });
+  }, []);
+ */
+  // this is text animation but the text start with all text after 3 seconds it will animate to type
+
+  useGSAP(() => {
+    const chars = fullName.split("");
+
+    // First, show the full name instantly
+    gsap.set(textRef.current, { textContent: fullName });
+
+    // Delay the animation start by 3 seconds
+    const tl = gsap.timeline({
+      repeat: -1,
+      repeatDelay: pauseDuration,
+      delay: 2,
+    });
+
+    chars.forEach((char, i) => {
+      tl.to(textRef.current, {
+        textContent: fullName.slice(0, i + 1),
+        duration: 0.17,
+        ease: "power2.inOut",
+      });
+    });
+
+    // After typing, clear the text
+    tl.to(textRef.current, {
+      textContent: "",
+      duration: 0.5,
+      delay: pauseDuration,
+    });
+
+    // Cursor blinking animation (no change)
     gsap.to(cursorRef.current, {
       opacity: 0,
       ease: "power2.inOut",

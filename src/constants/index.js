@@ -18,10 +18,10 @@ const navLinks = [
 ];
 
 const words = [
-  { text: "Code", imgPath: "/images/code.svg" },
   { text: "Ideas", imgPath: "/images/ideas.svg" },
   { text: "Problems", imgPath: "/images/problems.png" },
   { text: "Concepts", imgPath: "/images/concepts.svg" },
+  { text: "Code", imgPath: "/images/code.svg" },
   { text: "Dreams", imgPath: "/images/dreams.png" },
   { text: "Designs", imgPath: "/images/designs.svg" },
   { text: "Mockups", imgPath: "/images/mockups.png" },
