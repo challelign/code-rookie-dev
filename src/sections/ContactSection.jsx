@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 
 import TitleHeader from "../components/TitleHeader";
-import ContactExperience from "../components/models/contact/ContactExperience";
+import ContactExperience from "../components/Models/contact/ContactExperience";
 
 const ContactSection = () => {
   const formRef = useRef(null);
