@@ -3,6 +3,14 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React from "react";
 import { useRef } from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
+import { eventsShowcase, lmsShowcase } from "../constants";
+import {
+  renderArrowNext,
+  renderArrowPrev,
+  renderIndicator,
+} from "../components/carouselHelpers";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -55,32 +63,84 @@ const ShowcaseSection = () => {
         <div className="showcaselayout">
           {/* LEFT */}
           <div className="first-project-wrapper" ref={project1Ref}>
-            <div className="image-wrapper">
-              <img src="/images/project1.png" alt="Ryde" />
-            </div>
+            {/* <div className="image-wrapper">
+              <img src="/images/lms/lms-home.png" alt="Ryde" />
+            </div> */}
+            <Carousel
+              autoPlay
+              infiniteLoop
+              interval={5000}
+              showThumbs={false}
+              showStatus={false}
+              // dynamicHeight
+              swipeable
+              useKeyboardArrows
+              renderArrowPrev={renderArrowPrev}
+              renderArrowNext={renderArrowNext}
+              renderIndicator={renderIndicator}
+            >
+              {lmsShowcase.map((showcase, index) => (
+                <div className="image-wrapper bg-[#FFEFDB]" key={index}>
+                  <img
+                    src={showcase.imgPath}
+                    alt={showcase.alt || "Event Showcase Image"}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              ))}
+            </Carousel>
             <div className="text-content">
-              <h2>
-                On-Demand Rides Made Simple with a Powerful, User-Friendly App
-                called Ryde
-              </h2>
+              <h2>On-Demand Learning Management Platform</h2>
               <p className="text-white-50 md:text-xl">
-                An app built with React Native, Expo, & TailwindCSS for a fast,
-                user-friendly experience.
+                An app built with Next.js, React, Stripe for payments, Mux for
+                video streaming, Prisma for database management ,Clerk for
+                authehentication , Tailwind for styling, and MySQL for data
+                storage and more...
               </p>
             </div>
           </div>
           {/* RIGHT */}
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={project2Ref}>
-              <div className="image-wrapper bg-[#FFEFDB]">
+              {/* <div className="image-wrapper bg-[#FFEFDB]">
                 <img
-                  src="/images/project2.png"
+                  src="/images/event/home.png"
                   alt="Library Management Platform"
                 />
-              </div>
-              <h2>The Library Management Platform</h2>
-            </div>
+              </div> */}
 
+              <Carousel
+                autoPlay
+                infiniteLoop
+                interval={5000}
+                showThumbs={false}
+                showStatus={false}
+                // dynamicHeight
+                swipeable
+                useKeyboardArrows
+                renderArrowPrev={renderArrowPrev}
+                renderArrowNext={renderArrowNext}
+                renderIndicator={renderIndicator}
+              >
+                {eventsShowcase.map((showcase, index) => (
+                  <div className="image-wrapper bg-[#FFEFDB]" key={index}>
+                    <img
+                      src={showcase.imgPath}
+                      alt={showcase.alt || "Event Showcase Image"}
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                ))}
+              </Carousel>
+
+              <h2> Event Elevation: Crafting Unforgettable Experiences</h2>
+              <p className="text-white-50 md:text-xl"></p>
+              <p className="text-white-50 text-sm">
+                An app built with NextJs, Mongose,clerk auth using clerk webhook
+                and Strip payment with TailwindCSS for a fast, user-friendly
+                experience.
+              </p>
+            </div>
             <div className="project" ref={project3Ref}>
               <div className="image-wrapper bg-[#FFE7EB]">
                 <img src="/images/project3.png" alt="YC Directory App" />

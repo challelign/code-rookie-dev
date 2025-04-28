@@ -4,7 +4,33 @@
 :root {
   --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
 }
+/* carousel-custom.css */
+.carousel .control-arrow {
+  background: none;
+  /* remove gray background */
+  color: #FF7F00;
+  /* change arrow color (example: orange) */
+  font-size: 30px;
+  /* make arrows bigger if you want */
+}
 
+/* On hover */
+.carousel .control-arrow:hover {
+  color: #FF4500;
+  /* darker color on hover */
+}
+
+/* Dots (indicators) */
+.carousel .control-dots .dot {
+  background: #FF7F00;
+  /* orange color for dot */
+}
+
+/* Active dot */
+.carousel .control-dots .dot.selected {
+  background: #FF4500;
+  /* active dot color */
+}
 /* canvas- styles */
 .canvas-loader {
   font-size: 10px;

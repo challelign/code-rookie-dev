@@ -297,7 +297,7 @@ const socialImgs = [
   // },
   {
     name: "tg",
-    urlLing: "",
+    urlLing: "https://t.me/code_rookie23",
     imgPath: "/images/telegram-1.png",
   },
   {
@@ -317,7 +317,27 @@ const socialImgs = [
   },
 ];
 
+const eventsShowcase = [
+  { imgPath: "/images/event/home.png", alt: "Home" },
+  { imgPath: "/images/event/events.png", alt: "Events" },
+  { imgPath: "/images/event/event-detail.png", alt: "Event Detail" },
+  { imgPath: "/images/event/payment.jpg", alt: "Payment" },
+  { imgPath: "/images/event/my-ticket.png", alt: "My Ticket" },
+  { imgPath: "/images/event/order-list.png", alt: "Order List" },
+  // { imgPath: "/images/event/mob1.png", alt: "mobile home" },
+  // { imgPath: "/images/event/mob2.png", alt: "mobile e detail" },
+  // { imgPath: "/images/event/mob3.png", alt: "Order List" },
+];
+const lmsShowcase = [
+  { imgPath: "/images/lms/home.png", alt: "Home" },
+  { imgPath: "/images/lms/home2.png", alt: "home" },
+  { imgPath: "/images/lms/home3.png", alt: "home" },
+  { imgPath: "/images/lms/home4.png", alt: "home filter" },
+  { imgPath: "/images/lms/home5.png", alt: "home filter" },
+];
 export {
+  lmsShowcase,
+  eventsShowcase,
   words,
   abilities,
   logoIconsList,
