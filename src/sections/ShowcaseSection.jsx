@@ -11,6 +11,8 @@ import {
   renderArrowPrev,
   renderIndicator,
 } from "../components/carouselHelpers";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -81,9 +83,17 @@ const ShowcaseSection = () => {
             >
               {lmsShowcase.map((showcase, index) => (
                 <div className="image-wrapper bg-[#FFEFDB]" key={index}>
-                  <img
+                  {/*    <img
                     src={showcase.imgPath}
                     alt={showcase.alt || "Event Showcase Image"}
+                    className="w-full h-auto object-cover"
+                  /> */}
+
+                  <LazyLoadImage
+                    effect="blur"
+                    width="100%"
+                    src={showcase.imgPath}
+                    alt={showcase.alt || "LMS Showcase Image"}
                     className="w-full h-auto object-cover"
                   />
                 </div>
@@ -124,7 +134,15 @@ const ShowcaseSection = () => {
               >
                 {eventsShowcase.map((showcase, index) => (
                   <div className="image-wrapper bg-[#FFEFDB]" key={index}>
-                    <img
+                    {/*  <img
+                      src={showcase.imgPath}
+                      alt={showcase.alt || "Event Showcase Image"}
+                      className="w-full h-auto object-cover"
+                    /> */}
+
+                    <LazyLoadImage
+                      effect="blur"
+                      width="100%"
                       src={showcase.imgPath}
                       alt={showcase.alt || "Event Showcase Image"}
                       className="w-full h-auto object-cover"
