@@ -170,9 +170,30 @@ const HeroSection = () => {
         </div>
       </div>
       {/* Button fixed to bottom-left corner */}
-      <div className="absolute bottom-35 pl-35 md:left-10 z-10 ">
+      {/*      <div className="absolute bottom-20 pl-20 md:left-10 z-10 ">
         <Button
           className="w-96 h-12 sm:w-60 sm:h-14"
+          id="button"
+          text="See my work"
+        />
+      </div>
+ */}
+      <div
+        className="
+  absolute z-10
+  bottom-10 left-4              /* default (mobile) */
+  sm:bottom-12 sm:left-6        /* small screens */
+  md:bottom-16 md:left-10       /* medium screens */
+  xl:bottom-20 xl:pl-20         /* extra-large screens */
+"
+      >
+        <Button
+          className="
+      w-56 h-12                  /* default */
+      sm:w-60 sm:h-14           /* small screens */
+      md:w-72 md:h-14           /* medium screens */
+      xl:w-96 xl:h-14           /* extra-large screens */
+    "
           id="button"
           text="See my work"
         />
