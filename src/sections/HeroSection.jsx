@@ -158,7 +158,7 @@ const HeroSection = () => {
               that people love to use.
             </h1>
           </div>
-          <header className="flex flex-col justify-center items-start w-full px-6 md:px-10 mt-6 md:mt-10">
+          {/*  <header className="flex flex-col justify-center items-start w-full px-6 md:px-10 mt-6 md:mt-10">
             <div className="flex flex-col gap-6">
               <Button
                 className="w-56 h-12 sm:w-60 sm:h-14"
@@ -166,9 +166,18 @@ const HeroSection = () => {
                 text="See my work"
               />
             </div>
-          </header>
+          </header> */}
         </div>
       </div>
+      {/* Button fixed to bottom-left corner */}
+      <div className="absolute bottom-35 pl-35 md:left-10 z-10 ">
+        <Button
+          className="w-96 h-12 sm:w-60 sm:h-14"
+          id="button"
+          text="See my work"
+        />
+      </div>
+
       <ComputersCanvas />
     </section>
   );

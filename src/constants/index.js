@@ -343,7 +343,17 @@ const lmsShowcase = [
   { imgPath: "/images/lms/coursecreation.png", alt: "coursecreation" },
   { imgPath: "/images/lms/coursanalysis.png", alt: "coursanalysis" },
 ];
+
+const chatShowcase = [
+  { imgPath: "/images/chat/1.png", alt: "chat app" },
+  { imgPath: "/images/chat/2.png", alt: "chat app" },
+  { imgPath: "/images/chat/3.png", alt: "chat app" },
+  { imgPath: "/images/chat/4.png", alt: "chat app" },
+  { imgPath: "/images/chat/5.png", alt: "chat app" },
+  { imgPath: "/images/chat/6.png", alt: "chat app" },
+];
 export {
+  chatShowcase,
   lmsShowcase,
   eventsShowcase,
   words,

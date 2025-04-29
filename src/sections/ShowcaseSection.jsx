@@ -5,7 +5,7 @@ import React from "react";
 import { useRef } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import { eventsShowcase, lmsShowcase } from "../constants";
+import { chatShowcase, eventsShowcase, lmsShowcase } from "../constants";
 import {
   renderArrowNext,
   renderArrowPrev,
@@ -13,6 +13,7 @@ import {
 } from "../components/carouselHelpers";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import TitleHeader from "../components/TitleHeader";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,7 +63,11 @@ const ShowcaseSection = () => {
       className="app-showcase"
     >
       <div className="w-full">
-        <div className="showcaselayout">
+        <TitleHeader
+          title="Full-Stack Project Showcase"
+          sub="🚀 Explore the features and architecture of my end-to-end application"
+        />
+        <div className="mt-15 showcaselayout">
           {/* LEFT */}
           <div className="first-project-wrapper" ref={project1Ref}>
             {/* <div className="image-wrapper">
@@ -153,7 +158,7 @@ const ShowcaseSection = () => {
 
               <h2> Event Elevation: Crafting Unforgettable Experiences</h2>
               <p className="text-white-50 md:text-xl"></p>
-              <p className="text-white-50 text-sm">
+              <p className="text-white-50 md:text-xl">
                 An app built with NextJs, Mongose,clerk auth using clerk webhook
                 and Strip payment with TailwindCSS for a fast, user-friendly
                 experience.
@@ -161,9 +166,41 @@ const ShowcaseSection = () => {
             </div>
             <div className="project" ref={project3Ref}>
               <div className="image-wrapper bg-[#FFE7EB]">
-                <img src="/images/project3.png" alt="YC Directory App" />
+                <Carousel
+                  autoPlay
+                  infiniteLoop
+                  interval={5000}
+                  showThumbs={false}
+                  showStatus={false}
+                  // dynamicHeight
+                  swipeable
+                  useKeyboardArrows
+                  renderArrowPrev={renderArrowPrev}
+                  renderArrowNext={renderArrowNext}
+                  renderIndicator={renderIndicator}
+                >
+                  {chatShowcase.map((showcase, index) => (
+                    <div className="image-wrapper bg-[#FFEFDB]" key={index}>
+                      <LazyLoadImage
+                        effect="blur"
+                        width="100%"
+                        src={showcase.imgPath}
+                        alt={showcase.alt || "Chat Showcase Image"}
+                        className="w-full h-auto object-cover"
+                      />
+                    </div>
+                  ))}
+                </Carousel>
               </div>
-              <h2>YC Directory - A Startup Showcase App</h2>
+              <h2>Social Chat App with Real-Time Notifications</h2>
+              <p className="text-white-50 md:text-xl">
+                Social Chat, a cutting-edge social media application built with
+                the latest technologies! This dynamic platform leverages Next.js
+                15 for seamless server-side rendering, React 19 for an
+                interactive user experience, and Socket.io for real-time
+                notifications and messaging.and TailwindCSS for a fast,
+                user-friendly experience.
+              </p>
             </div>
           </div>
         </div>
