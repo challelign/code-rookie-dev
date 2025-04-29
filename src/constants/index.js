@@ -330,10 +330,18 @@ const eventsShowcase = [
 ];
 const lmsShowcase = [
   { imgPath: "/images/lms/home.png", alt: "Home" },
-  { imgPath: "/images/lms/home2.png", alt: "home" },
+  // { imgPath: "/images/lms/home2.png", alt: "home" },
   { imgPath: "/images/lms/home3.png", alt: "home" },
   { imgPath: "/images/lms/home4.png", alt: "home filter" },
-  { imgPath: "/images/lms/home5.png", alt: "home filter" },
+  // { imgPath: "/images/lms/home5.png", alt: "home filter" },
+  { imgPath: "/images/lms/home6.png", alt: "course" },
+  { imgPath: "/images/lms/homep.png", alt: "course" },
+  { imgPath: "/images/lms/coursestart.png", alt: "course" },
+  { imgPath: "/images/lms/courseratting.png", alt: "course" },
+  { imgPath: "/images/lms/coursehome.png", alt: "course" },
+  { imgPath: "/images/lms/coursed.png", alt: "course" },
+  { imgPath: "/images/lms/coursecreation.png", alt: "coursecreation" },
+  { imgPath: "/images/lms/coursanalysis.png", alt: "coursanalysis" },
 ];
 export {
   lmsShowcase,

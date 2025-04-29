@@ -14,3 +14,5 @@ npm i @emailjs/browser --legacy-peer-deps
 # I HAVE ESLINT TO CHECK IMPORT AND TYPESAFTY THEN RUN THIS ONE TO CHECK
 
 npx eslint src/
+
+npm install --legacy-peer-deps
