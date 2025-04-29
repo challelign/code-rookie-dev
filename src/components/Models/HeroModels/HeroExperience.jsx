@@ -2,9 +2,10 @@ import React, { Suspense, useMemo } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
-import { Room } from "../Room.jsx";
+
 import HeroLights from "./HeroLights.jsx";
 import Particles from "./Particles.jsx";
+import { Room } from "../../Room.jsx";
 
 const HeroExperience = () => {
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });

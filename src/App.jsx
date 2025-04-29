@@ -2,7 +2,7 @@ import AnimatedCounter from "./components/AnimatedCounter";
 import LogoSection from "./sections/LogoSection";
 import NavBar from "./components/NavBar";
 
-import heroBg from "/assets/herobg.png";
+import heroBg from "../src/assets/herobg.png";
 import FeatureCardsSection from "./sections/FeatureCardsSection";
 import ShowcaseSection from "./sections/ShowcaseSection";
 import HeroSection from "./sections/HeroSection";
