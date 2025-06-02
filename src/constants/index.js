@@ -187,40 +187,51 @@ const expCards = [
   {
     review:
       "Challelign brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
-    responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
-    ],
-  },
-  {
-    review:
-      "Challelign’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
+    imgPath: "/images/abayBank.png",
+    logoPath: "/images/abay-logo.png",
     title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+    date: "March 2023 - Present",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
+      "Biller Pyament Integration Like M-PESA Ethiopia.",
+     "Led the development of Docker's web applications, focusing on scalability.",
       "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
       "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Payment Integration for third-party API integrations",
     ],
   },
   {
     review:
-      "Challelign’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
+      "Challelign’s contributions to web applications at Ameco have been outstanding. He consistently approaches challenges with a proactive, problem-solving mindset",
+    imgPath: "/images/ameco.jpg",
+    logoPath: "/images/ameco-logo.png",
+    title: "Software Developer",
+    date: "November 10, 2020 - March 2023",
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
+      "Led Plan and Field Allowance Management System .",
+      "Developing a comprehensive web application to manage employee plans, transportation, field allowances, car receipts, and financial transactions.",
+      "Aims to centralize and streamline internal operations with user role management and secure data handling.",
+      "Designed and implemented a system for managing online streaming schedules for TV, FM, and Radio programs.",
+      "Significantly reduced paper usage by 50%, time wastage by 70%, and improved centralized data organization and maintainability by 80%.",
+      "Built a task-tracking platform for the video editing team to log daily activities such as editing news, programs, transitions, etc.",
+      "Enabled managers to approve and monitor daily work and generate detailed reports by user, date, or period (monthly, yearly).",
+ 
+    ],
+  },
+  {
+    review:
+      "As a self-employed developer, I design, build, and deliver end-to-end software solutions tailored to client needs. I collaborate directly with small businesses, startups, and organizations to understand their requirements, propose technical solutions, and implement scalable systems that drive digital transformation.",
+    imgPath: "/images/app-development.png",
+    logoPath: "/images/code.png",
+    title: "Self Employed and Freelancer",
+    date: "September 2018 - May 2020",
+    responsibilities: [
+      "Developed dynamic web applications using the MERN (MongoDB, Express, React, Node.js) stack tailored to client needs and business goals.",
       "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Specialized in building RESTful APIs and integrating third-party APIs for payment gateways, messaging services, and data providers",
+      "Focused on scalable backend architecture, clean front-end UI/UX, and secure API design",
+      "Designed and delivered customer-centric web applications with responsive design, real-time updates, and optimized performance.",
+      "Plasma Network Setup: Designed and installed educational plasma display network infrastructure for 6 Woredas (districts) across schools in the Amhara region, spanning a 6-month deployment",
+      "Hotel WiFi Configuration: Installed and configured Wi-Fi networks for hospitality clients, ensuring optimal signal coverage, secure access, and seamless guest connectivity."
     ],
   },
 ];
