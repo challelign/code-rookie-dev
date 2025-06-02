@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { createHandleMouseMove } from "../utils/mouseHandlers";
+import { Star } from "lucide-react";
 
 const GlowCard = ({ card, children, index }) => {
   const cardRefs = useRef([]);
@@ -31,7 +32,9 @@ const GlowCard = ({ card, children, index }) => {
       <div className="glow" />
       <div className="flex items-center gap-1 mb-5">
         {Array.from({ length: 5 }, (__dirname, i) => (
-          <img src="/images/star.png" key={i} alt="star" className="size-5" />
+          // <img src="/images/star.png" key={i} alt="star" className="size-5" />
+      <Star size={24} color="yellow" fill="yellow"/>
+
         ))}
       </div>
       <div className="mb-5">

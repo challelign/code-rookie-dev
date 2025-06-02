@@ -45,7 +45,7 @@ const ContactSection = () => {
     <section id="contact" className="flex-center section-padding">
       <div className="w-full h-full md:px-20 px-5  mt-20 md:pt-0">
         <TitleHeader
-          title="Get in Touch – Let’s Connect"
+          title="Get in Touch - Hire Me – Let’s Connect"
           sub="💬 Have questions or ideas? Let’s talk! 🚀"
         />
         <div className="grid-12-cols mt-10">

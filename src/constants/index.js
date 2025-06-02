@@ -150,6 +150,12 @@ const techStackImgs = [
 ];
 
 const techStackIcons = [
+    {
+    name: "Backend Developer",
+    modelPath: "/models/node-transformed.glb",
+    scale: 5,
+    rotation: [0, -Math.PI / 2, 0],
+  },
   {
     name: "React Developer",
     modelPath: "/models/react_logo-transformed.glb",
@@ -162,12 +168,7 @@ const techStackIcons = [
   //   scale: 0.8,
   //   rotation: [0, 0, 0],
   // },
-  {
-    name: "Backend Developer",
-    modelPath: "/models/node-transformed.glb",
-    scale: 5,
-    rotation: [0, -Math.PI / 2, 0],
-  },
+
   {
     name: "Interactive Developer",
     modelPath: "/models/three.js-transformed.glb",
@@ -241,47 +242,56 @@ const expLogos = [
 
 const testimonials = [
   {
-    name: "Esther Howard",
-    mentions: "@estherhoward",
+    name: "Abebe Gietaneh",
+    mentions: "@Peerage Technologies Plc",
     review:
-      "I can’t say enough good things about Challelign. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
+      "I can’t speak highly enough of Challelign. He transformed our complex project requirements into a seamless, fully functional website with exceptional skill and precision. His problem-solving abilities are truly outstanding.",
     imgPath: "/images/client1.png",
   },
+
   {
-    name: "Wade Warren",
-    mentions: "@wadewarren",
-    review:
-      "Working with Challelign was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
-    imgPath: "/images/client3.png",
-  },
-  {
-    name: "Guy Hawkins",
-    mentions: "@guyhawkins",
+    name: "Ermiyas Fentaye",
+    mentions: "@boostsoftwaredevelopment",
     review:
       "Collaborating with Challelign was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Challelign's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Challelign is the ideal partner.",
-    imgPath: "/images/client2.png",
+    imgPath: "/images/defaul-client.png",
   },
+  
   {
-    name: "Marvin McKinney",
-    mentions: "@marvinmckinney",
+    name: "Zeru Denekew (Executive Director) ",
+    mentions: "@agradoethiopia",
     review:
       "Challelign was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
-    imgPath: "/images/client5.png",
+    imgPath: "/images/client3.png",
   },
-  {
-    name: "Floyd Miles",
-    mentions: "@floydmiles",
-    review:
-      "Challelign’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
-    imgPath: "/images/client4.png",
-  },
-  {
-    name: "Albert Flores",
-    mentions: "@albertflores",
-    review:
-      "Challelign was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
-    imgPath: "/images/client6.png",
-  },
+  //   {
+  //   name: "Wade Warren",
+  //   mentions: "@wadewarren",
+  //   review:
+  //     "Working with Challelign was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
+  //   imgPath: "/images/client3.png",
+  // },
+  // {
+  //   name: "Marvin McKinney",
+  //   mentions: "@marvinmckinney",
+  //   review:
+  //     "Challelign was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
+  //   imgPath: "/images/client5.png",
+  // },
+  // {
+  //   name: "Floyd Miles",
+  //   mentions: "@floydmiles",
+  //   review:
+  //     "Challelign’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
+  //   imgPath: "/images/client4.png",
+  // },
+  // {
+  //   name: "Albert Flores",
+  //   mentions: "@albertflores",
+  //   review:
+  //     "Challelign was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
+  //   imgPath: "/images/client6.png",
+  // },
 ];
 
 const socialImgs = [
@@ -352,7 +362,38 @@ const chatShowcase = [
   { imgPath: "/images/chat/5.png", alt: "chat app" },
   { imgPath: "/images/chat/6.png", alt: "chat app" },
 ];
+
+const youtubeShowcase = [
+  { imgPath: "/images/ytube/home.png", alt: "youtube RAPID API app" },
+  { imgPath: "/images/ytube/next.png", alt: "youtube RAPID API app" },
+  { imgPath: "/images/ytube/nextd.png", alt: "youtube RAPID API app" },
+  { imgPath: "/images/ytube/s.png", alt: "youtube RAPID API app" },
+  { imgPath: "/images/ytube/sdetail.png", alt: "youtube RAPID API app" },
+];
+const nikeShowcase = [
+  { imgPath: "/images/nike/home.png", alt: "Nike Landing page" },
+  { imgPath: "/images/nike/popular.png", alt: "Nike Landing page" },
+  { imgPath: "/images/nike/quality.png", alt: "Nike Landing page" },
+];
+
+
+const ecommercehowcase = [
+  { imgPath: "/images/ecommerce/1.PNG", alt: "Ecommerce MERN Stack app" },
+  { imgPath: "/images/ecommerce/2.PNG", alt: "Ecommerce MERN Stack app" },
+  { imgPath: "/images/ecommerce/3.PNG", alt: "Ecommerce MERN Stack app" },
+  { imgPath: "/images/ecommerce/4.PNG", alt: "Ecommerce MERN Stack app" },
+  { imgPath: "/images/ecommerce/5.PNG", alt: "Ecommerce MERN Stack app" },
+  { imgPath: "/images/ecommerce/6.PNG", alt: "Ecommerce MERN Stack app" },
+  { imgPath: "/images/ecommerce/7.PNG", alt: "Ecommerce MERN Stack app" },
+  { imgPath: "/images/ecommerce/8.PNG", alt: "Ecommerce MERN Stack app" },
+  { imgPath: "/images/ecommerce/9.PNG", alt: "Ecommerce MERN Stack app" },
+  { imgPath: "/images/ecommerce/10.PNG", alt: "Ecommerce MERN Stack app" },
+  { imgPath: "/images/ecommerce/11.PNG", alt: "Ecommerce MERN Stack app" },
+  { imgPath: "/images/ecommerce/12.PNG", alt: "Ecommerce MERN Stack app" },
+];
 export {
+  nikeShowcase,
+  youtubeShowcase,
   chatShowcase,
   lmsShowcase,
   eventsShowcase,
@@ -367,4 +408,5 @@ export {
   techStackIcons,
   techStackImgs,
   navLinks,
+  ecommercehowcase
 };

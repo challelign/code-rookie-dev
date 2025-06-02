@@ -33,7 +33,8 @@ const App = () => (
       <ContactSection />
       <FooterSection />
     </div>
-    <ToastContainer />;
+    <ToastContainer />
+ 
   </>
 );
 
